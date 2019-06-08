@@ -4,8 +4,7 @@ version: '3'
 services:
   # WEB SERVERS ##################################
   web:
-    env_file:
-      - .env
+    env_file: .env
     build:
       context: ./nginx
       dockerfile: Dockerfile-dev
@@ -27,8 +26,7 @@ services:
 
   # APPLICATION ##############################
   app:
-    env_file:
-      - .env
+    env_file: .env
     build:
       context: .
       dockerfile: ./application/Dockerfile
